@@ -1,0 +1,13 @@
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.exe
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.deps.json
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.runtimeconfig.json
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.runtimeconfig.dev.json
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.dll
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\bin\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.pdb
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.csprojAssemblyReference.cache
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.AssemblyInfoInputs.cache
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.AssemblyInfo.cs
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.csproj.CoreCompileInputs.cache
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.dll
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.pdb
+C:\Users\Sergey\source\repos\TestTasks\Appricot_Test_VlasenkoSA\Appricot_Test_VlasenkoSA\obj\Debug\netcoreapp3.1\Appricot_Test_VlasenkoSA.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Appricot_Test_VlasenkoSA/1.0.0": {
+        "runtime": {
+          "Appricot_Test_VlasenkoSA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Appricot_Test_VlasenkoSA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
