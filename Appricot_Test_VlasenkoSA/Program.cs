@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace Appricot_Test_VlasenkoSA
 {
@@ -14,11 +13,11 @@ namespace Appricot_Test_VlasenkoSA
 
             do
             {
-                cki = Console.ReadKey();
+                cki = Console.ReadKey(true);
 
-                //if ((cki.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("ALT+");
-                //if ((cki.Modifiers & ConsoleModifiers.Shift) != 0) Console.Write("SHIFT+");
-                //if ((cki.Modifiers & ConsoleModifiers.Control) != 0) Console.Write("CTL+");
+                if ((cki.Modifiers & ConsoleModifiers.Alt) != 0) Console.Write("");
+                else if ((cki.Modifiers & ConsoleModifiers.Control) != 0) Console.Write("");
+                else Console.Write(cki.KeyChar);
 
                 if (cki.Key == ConsoleKey.Enter)
                     Console.WriteLine();
@@ -26,7 +25,7 @@ namespace Appricot_Test_VlasenkoSA
 
             } while (!(cki.Modifiers == ConsoleModifiers.Control &&  cki.Key == ConsoleKey.S));
 
-            Console.WriteLine("File saved");
+            Console.WriteLine("\nFile saved");
         }
     }
 }
