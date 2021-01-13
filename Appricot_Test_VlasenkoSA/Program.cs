@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Appricot_Test_VlasenkoSA
 {
@@ -11,38 +12,57 @@ namespace Appricot_Test_VlasenkoSA
             Console.TreatControlCAsInput = true;
 
             StringBuilder sb = new StringBuilder();
-            ConsoleKeyInfo cki;
+            ConsoleKeyInfo currentKey;
+
+            List<int> rowsLengths = new List<int>();
+            int currentRowLength = 0;
 
             do
             {
-                cki = Console.ReadKey(true);
+                currentKey = Console.ReadKey(true);
 
-                if (cki.Modifiers == ConsoleModifiers.Control && cki.Key == ConsoleKey.S)
+                if (currentKey.Modifiers == ConsoleModifiers.Control && currentKey.Key == ConsoleKey.S)
                     return sb.ToString();
 
-                if (cki.Key == ConsoleKey.Enter)
+                if (currentKey.Key == ConsoleKey.Enter)
                 {
-                    sb.Append(cki.KeyChar);
+                    sb.Append(currentKey.KeyChar);
                     Console.WriteLine();
+                    currentRowLength++;
+
+                    rowsLengths.Add(currentRowLength);
+
+                    currentRowLength = 0;
                 }
-                else if (cki.Key == ConsoleKey.Backspace)
+                else if (currentKey.Key == ConsoleKey.Backspace)
                 {
                     if (sb.Length > 0)
                     {
+                        if (sb[sb.Length - 1] == (char)ConsoleKey.Enter)
+                        {
+                            Console.CursorTop--;
+                            Console.CursorLeft = rowsLengths[rowsLengths.Count - 1];
+
+                            currentRowLength = rowsLengths[rowsLengths.Count - 1];
+                            rowsLengths.RemoveAt(rowsLengths.Count - 1);
+                        }
+
                         sb = sb.Remove(sb.Length - 1, 1);
-                        Console.Write(cki.KeyChar);
-                        Console.Write(' ');
-                        Console.Write(cki.KeyChar);
+                        Console.Write(currentKey.KeyChar);
+                        Console.Write(" ");
+                        Console.Write(currentKey.KeyChar);
+                        currentRowLength--;
                     }
                 }
-                else if ((cki.Modifiers & ConsoleModifiers.Alt) != 0)
+                else if ((currentKey.Modifiers & ConsoleModifiers.Alt) != 0)
                     Console.Write("");
-                else if ((cki.Modifiers & ConsoleModifiers.Control) != 0)
+                else if ((currentKey.Modifiers & ConsoleModifiers.Control) != 0)
                     Console.Write("");
                 else
                 {
-                    sb.Append(cki.KeyChar);
-                    Console.Write(cki.KeyChar);
+                    sb.Append(currentKey.KeyChar);
+                    Console.Write(currentKey.KeyChar);
+                    currentRowLength++;
                 }
             }
             while (true);
@@ -59,9 +79,23 @@ namespace Appricot_Test_VlasenkoSA
 
             string path = string.Format($"{DateTime.Now:dd-MM-yyyy-HH-mm-ss}.txt");
 
-            File.WriteAllText(path, text);
-
-            Console.WriteLine($"\nFile successfully saved. {new FileInfo(path).Length} bytes");
+            try
+            {
+                File.WriteAllText(path, text);
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.WriteLine($"{ex.Message} \nCheck the directory path.");
+                throw;
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine($"\nFile successfully saved. {new FileInfo(path).Length} bytes");
+            }
         }
     }
 }
