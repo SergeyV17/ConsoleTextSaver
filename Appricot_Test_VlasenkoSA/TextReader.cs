@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace Appricot_Test_VlasenkoSA
 {
+    /// <summary>
+    /// Класс обработки текста
+    /// </summary>
     class TextReader
     {
         private StringBuilder sb;
@@ -13,6 +16,9 @@ namespace Appricot_Test_VlasenkoSA
         private int currentRowLength;
         private readonly List<int> rows;
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public TextReader()
         {
             sb = new StringBuilder();
@@ -23,6 +29,9 @@ namespace Appricot_Test_VlasenkoSA
             Console.TreatControlCAsInput = true;
         }
 
+        /// <summary>
+        /// Метод обработки нажатия клавиши "Enter"
+        /// </summary>
         private void EnterBtnHandler()
         {
             sb.Append(currentKey.KeyChar);
@@ -32,6 +41,10 @@ namespace Appricot_Test_VlasenkoSA
             rows.Add(currentRowLength);
             currentRowLength = 0;
         }
+
+        /// <summary>
+        /// Метод обработки нажатия клавиши "Backspace"
+        /// </summary>
         private void BackspaceBtnHandler()
         {
             if (sb.Length > 0)
@@ -52,6 +65,10 @@ namespace Appricot_Test_VlasenkoSA
                 currentRowLength--;
             }
         }
+
+        /// <summary>
+        /// Метод обработки нажатия клавиш не предусмотренных другими методами
+        /// </summary>
         private void StandardBtnHandler()
         {
             sb.Append(currentKey.KeyChar);
@@ -59,6 +76,10 @@ namespace Appricot_Test_VlasenkoSA
             currentRowLength++;
         }
 
+        /// <summary>
+        /// Метод обработки вводимого текста
+        /// </summary>
+        /// <returns>текст</returns>
         public string Read()
         {
             do

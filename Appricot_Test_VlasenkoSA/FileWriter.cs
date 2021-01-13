@@ -3,8 +3,16 @@ using System.IO;
 
 namespace Appricot_Test_VlasenkoSA
 {
+    /// <summary>
+    /// Класс записи текста в текстовый файл на жёстком диске
+    /// </summary>
     class FileWriter
     {
+        /// <summary>
+        /// Метод записи текста в текстовый файл на жёстком диске
+        /// </summary>
+        /// <param name="path">путь к файлу</param>
+        /// <param name="text">текст</param>
         public void Write(string path, string text)
         {
             try

@@ -2,8 +2,14 @@
 
 namespace Appricot_Test_VlasenkoSA
 {
+    /// <summary>
+    /// Класс старта приложения
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Точка входа в приложение
+        /// </summary>
         static void Main()
         {
             Console.WriteLine("Enter text line and press Enter for new line. Press Ctrl + S to Save file");
